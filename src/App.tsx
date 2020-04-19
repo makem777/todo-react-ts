@@ -1,11 +1,15 @@
-import * as React from "react";
-import "./styles.css";
+import React from "react";
+import TodoForm from './components/TodoForm';
+import TodoList from './components/TodoList';
+import { TodosContextProvider } from './context/TodosContext';
 
-export default function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
+    <TodosContextProvider>
+      <TodoForm />
+      <TodoList />
+    </TodosContextProvider>
   );
-}
+};
+
+export default App;
