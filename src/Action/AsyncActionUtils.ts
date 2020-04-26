@@ -61,7 +61,6 @@ export function createAsyncHandler(type: string, key: string) {
   const ERROR = `${type}_ERROR`;
 
   function handler(state: any, action: any) {
-    debugger;
     switch (action.type) {
       case type:
         return {
